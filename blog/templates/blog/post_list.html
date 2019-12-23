@@ -15,19 +15,11 @@
             </p>
         </div>
 
-        <div>
-            <h2><a href="">Первое выступление группы</a></h2>
-
-            <p>Впервые группа приняла участие в Family Fest 2019</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O5EHkzTK9dg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <p>Дата публикации: 12.12.2019, 12:14</p>
-        </div>
-
-        <div>
-            <h2><a href="">Второе выступление состоится 28.12.2019</a></h2>
-
-            <p>Видео и другие подробности о выступлении девочек будут доступны 29.12.2019</p>
-            <p>Дата публикации: 13.12.2019, 12:10</p>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p> {{ post.text|linebreaksbr }}</p>
+        {% endfor %}
     </body>
 </html>
