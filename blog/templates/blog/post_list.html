@@ -1,25 +1,12 @@
-<html>
-    <head>
-        <title>DDC Talant Center</title>
-    </head>
-    <body>
-        <div>
-            <h1>DDC и группа Контемп</h1>
-            <p>
-                <ul>
-                    <li>Набор в группу начался 01.09.2019</li>
-                    <li>Возраст участниц от 6 до 9 лет</li>
-                    <li>Расписание занятий: Вторник - 18:00, Пятница  - 18:00</li>
-                    <li><a href='https://dandancecomplex.com/'>dandancecomplex.com</a></li>
-                </ul>
-            </p>
-        </div>
+{% extends 'blog/base.html' %}
 
-        {% for post in posts %}
-            <div>
-                <h1><a href="">{{ post.title }}</a></h1>
-                <p> {{ post.text|linebreaksbr }}</p>
-                <p>published: {{ post.published_date }}</p>
-        {% endfor %}
-    </body>
-</html>
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p> {{ post.text|linebreaksbr }}</p>
+            <div class="date">
+                <p>Опубликовано: {{ post.published_date }}</p>
+            </div>
+    {% endfor %}
+{% endblock %}
