@@ -1,4 +1,5 @@
 {% load static %}
+
 <html>
     <head>
         <title>DDC Talant Center</title>
@@ -12,23 +13,27 @@
         {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% endif %}
-        <h1>DDC и группа Контемп</h1>
-        <p>
+        <h1>TALANT CENTER</h1>
+        <h1> DDC</h1>
+        <h2>Танцевать может каждый</h2>
+        <ul id="navbar">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">О нас</a></li>
+        </ul>
+<!--         <p>
             <ul>
                 <li>Набор в группу начался 01.09.2019</li>
                 <li>Возраст участниц от 6 до 9 лет</li>
                 <li>Расписание занятий: Вторник - 18:00, Пятница  - 18:00</li>
                 <li><a href='https://dandancecomplex.com/'>dandancecomplex.com</a></li>
             </ul>
-        </p>
-        </div>
+        </p> -->
+    </div>
     <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
-            </div>
-        </div>
+        {% block content %}
+        {% endblock %}
     </div>
 </body>
 </html>

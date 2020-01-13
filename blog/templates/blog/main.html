@@ -1,0 +1,67 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+      <div class="column">
+        <div class="content-for-main-page">
+            <img src="{% static "images/breakdance.jpg" %}" alt="BREAK DANCE" style="width:100%">
+            <h3>BREAK DANCE</h3>
+            <p>Появление B-boying или breaking (break dance) в шоу Дж.Брауна произвело эффект «разорвавшейся бомбы»!</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content-for-main-page">
+            <a href="{% url 'contemporary' %}">
+                <img src="{% static "images/contemporary.jpg" %}" alt="CONTEMPORARY" style="width:100%">
+            </a>
+            <h3>CONTEMPORARY</h3>
+            <p>Чувственный, пластичный, невероятно красивый стиль Contemporary совмещает в себе несколько танцевальных техник, соединяя элементы западного и восточного направлений.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content-for-main-page">
+            <img src="{% static "images/hiphop.jpg" %}" alt="ХИП-ХОП" style="width:100%">
+            <h3>ХИП-ХОП</h3>
+            <p>Один из популярнейших современных танцевальных стилей Хип-Хоп поможет раскрепоститься и почувствовать свое тело на все 100%!</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content-for-main-page">
+            <img src="{% static "images/aerial-silks.jpg" %}" alt="AERIAL SILKS" style="width:100%">
+            <h3>AERIAL SILKS</h3>
+            <p>Неповторимое чувство полета и свободы подарят уроки Aerial Silks – популярного сегодня направления.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="content-for-main-page">
+            <img src="{% static "images/modern.jpg" %}" alt="MODERN" style="width:100%">
+            <h3>MODERN</h3>
+            <p>Новое направление хореографии зародилось на рубеже 19–20 веков в США и Германии.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content-for-main-page">
+            <img src="{% static "images/detskayahoreografia.jpg" %}" alt="DETSKAYAHOREOGRAFIA" style="width:100%">
+            <h3>ДЕТСКАЯ ХОРЕОГРАФИЯ</h3>
+            <p>Занимаясь танцами, дети становятся сильными и ловкими, гибкими и пластичными, приобретают прекрасную физическую форму, навыки общения и работы в коллективе.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content-for-main-page">
+            <img src="{% static "images/jazzfunk.jpg" %}" alt="DJAZZFUNK" style="width:100%">
+            <h3>JAZZ FANK</h3>
+            <p>Джаз Фанк с присущей ему яркой эмоциональной окраской привлекает множество поклонников этого стиля с самого своего появления в начале текущего столетия.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content-for-main-page">
+            <img src="{% static "images/latina.jpg" %}" alt="LATINA" style="width:100%">
+            <h3>LATINA</h3>
+            <p>Неподдельные эмоции, страстность и чувственность – этим наполнено каждое движение в любом из танцев Латины.</p>
+        </div>
+      </div>
+    </div>
+{% endblock %}

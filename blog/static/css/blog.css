@@ -4,18 +4,50 @@
     padding: 20px 20px 20px 40px;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active, .page-header h2 {
     color: #ffffff;
     font-size: 36pt;
+    text-align: center;
     text-decoration: none;
+    font-family: 'Lobster', cursive;
+}
+#navbar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-radius: 5px 5px;
+  width: 100%;
+  text-align: center;
+  background-color: #ff9400;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar a {
+  color: #000000;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+#navbar a:hover {
+  text-decoration: underline;
 }
 
 .content {
     margin-left: 40px;
+    color: #000000;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+h1, h2 {
+    font-family: 'Lobster', fantasy;
+}
+
+h3, h4 {
+    font-family: 'Verdana';
 }
 
 .date {
@@ -33,7 +65,7 @@ h1, h2, h3, h4 {
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #ffffff;
     float: right;
-    font-size: 26pt;
+    font-size: 20pt;
     margin-right: 20px;
 }
 
@@ -45,6 +77,33 @@ h1, h2, h3, h4 {
     color: #000000;
 }
 
-.glyphicon {
-    color: #FDF5E6;
+.row {
+    margin: 0px 0px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding: 20px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content-for-main-page p {
+    color:  #A0A0A0;
+}
+
+.content-for-page a {
+    float: left;
 }
