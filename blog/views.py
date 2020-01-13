@@ -12,6 +12,10 @@ from django.shortcuts import redirect
 def main(request):
     return render(request, 'blog/main.html')
 
+
+def breakdance(request):
+    return render(request, 'blog/breakdance.html')
+
 def contemporary(request):
     return render(request, 'blog/contemporary.html')
 
