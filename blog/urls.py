@@ -7,6 +7,7 @@ urlpatterns = [
     path('contemporary/', views.contemporary, name='contemporary'),
     path('hiphop/', views.hiphop, name='hiphop'),
     path('aerial_silks/', views.aerial_silks, name='aerial_silks'),
+    path('detskaya_horeografiya/', views.detskaya_horeografiya, name='detskaya_horeografiya'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new/', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
