@@ -12,7 +12,6 @@ from django.shortcuts import redirect
 def main(request):
     return render(request, 'blog/main.html')
 
-
 def breakdance(request):
     return render(request, 'blog/breakdance.html')
 
@@ -30,6 +29,9 @@ def detskaya_horeografiya(request):
 
 def jazzfunk(request):
     return render(request, 'blog/jazzfunk.html')
+
+def latina(request):
+    return render(request, 'blog/latina.html')
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
