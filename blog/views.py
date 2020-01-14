@@ -28,6 +28,9 @@ def aerial_silks(request):
 def detskaya_horeografiya(request):
     return render(request, 'blog/detskaya_horeografiya.html')
 
+def jazzfunk(request):
+    return render(request, 'blog/jazzfunk.html')
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
