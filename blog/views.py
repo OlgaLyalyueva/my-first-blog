@@ -27,6 +27,9 @@ def aerial_silks(request):
 def detskaya_horeografiya(request):
     return render(request, 'blog/detskaya_horeografiya.html')
 
+def modern(request):
+    return render(request, 'blog/modern.html')
+
 def jazzfunk(request):
     return render(request, 'blog/jazzfunk.html')
 

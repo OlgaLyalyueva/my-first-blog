@@ -8,6 +8,7 @@ urlpatterns = [
     path('hiphop/', views.hiphop, name='hiphop'),
     path('aerial_silks/', views.aerial_silks, name='aerial_silks'),
     path('detskaya_horeografiya/', views.detskaya_horeografiya, name='detskaya_horeografiya'),
+    path('modern/', views.modern, name='modern'),
     path('jazzfunk/', views.jazzfunk, name='jazzfunk'),
     path('latina/', views.latina, name='latina'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
