@@ -1,0 +1,49 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="col-md-8">
+        <h3>«МЫ НАХОДИМСЯ В САМОМ ЦЕНТРЕ ГОРОДА ДНЕПР.»</h3>
+        <p>В случае вопросов, мы всегда рады ответить на них по тел. Так же для удобства, Вы можете задать свой вопрос онлайн, через обратную связь. До встречи в нашем пространстве творчества.</p>
+        <div class="col-md-4">
+            <h3>КОНТАКТЫ</h3>
+            <p>+38 094 567 87 65</p>
+            <p>Днепр, пр. Д. Яворницкого, 57</p>
+            <p>info@dandancecomplex.com</p>
+        </div>
+        <div class="col-md-8">
+            <h3>ГРАФИК РАБОТЫ</h3>
+            <div class="col-md-2">
+                <p>Понедельник</br>
+                   Вторник
+                   Среда
+                   Четверг
+                   Пятница
+                   Суббота
+                   Воскресенье
+                </p>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-4">
+                <p>10.00-21.00</br>
+                   10.00-21.00</br>
+                   10.00-21.00</br>
+                   10.00-21.00</br>
+                   10.00-21.00</br>
+                   10.00-21.00</br>
+                   Закрыто</br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="contact_name">
+            <form method="POST" action="" class="contactform-form"> {% csrf_token %}
+                <p><input type="name" name="name" placeholder="Ваше имя" id="contact_name" required /></p>
+                <p><input type="email" name="email" placeholder="Ваш Email" id="contact_email" required /></p>
+                <p><textarea  name="message" placeholder="Ваше сообщение" id="contact_message" required></textarea></p>
+                <p><input type="submit" name ="submit" value="Отправить" class="btn" /></p>
+            </form>
+        </div>
+    </div>
+{% endblock %}
