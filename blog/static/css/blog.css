@@ -50,7 +50,7 @@ h3, h4 {
     font-family: 'Verdana';
 }
 
-.date {
+.date, p {
     color: #828282;
 }
 
@@ -110,4 +110,54 @@ h3, h4 {
     float: left;
 }
 
+#contact_name, #contact_email, #contact_message {
+    width: 100%;
+    margin-top: 20px;
+    display:block;
+    margin-bottom:20px;
+    padding-right:20px;
+    padding-left:20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    font-weight: 300;
+    font-size:18px;
+    font-family: 'Open Sans', sans-serif;
+}
 
+/* Стили для кнопки отправить */
+.btn {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ff9400;
+    background: #ff9400;
+    background-image: -ms-linear-gradient(top, #ff6600 0%, #ff6600 100%);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    -moz-box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    color: #e1e1e1;
+    outline: none;
+}
+
+.btn:active {
+    margin-top:1px;
+    border: 1px solid #949191;
+    background: #ffcc00;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff6600));
+    background: -webkit-linear-gradient(top, #ffcc00, #ff6600);
+    background: -moz-linear-gradient(top, #ffcc00, #ff6600);
+    background: -ms-linear-gradient(top, #ffcc00, #ff6600);
+    background: -o-linear-gradient(top, #ffcc00, #ff6600);
+    background-image: -ms-linear-gradient(top, #ffcc00 0%, #ff6600 100%);
+    -webkit-box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    -moz-box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
+    color: #fff;
+}
