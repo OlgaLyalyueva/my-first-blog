@@ -4,13 +4,28 @@ from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
-
+from django.core.mail import send_mail
 
 
 # Create your views here.
 
 def main(request):
     return render(request, 'blog/main.html')
+
+def contacts(request):
+    contact_name = request.POST.get('name', '')
+    contact_email = request.POST.get('email', '')
+    contact_message = request.POST.get('message', '')
+    if request.method == 'POST' and contact_email and contact_name:
+        send_mail(
+            'Message from site DDC',
+            "Name from: " + contact_name + "\n" +
+            "Contact email: " + contact_email + "\n" +
+            "Message:\n" + contact_message,
+            'olgalyalyueva@gmail.com',
+            ['olgalyalyueva@gmail.com'],
+            fail_silently=False)
+    return render(request, 'blog/contacts.html')
 
 def breakdance(request):
     return render(request, 'blog/breakdance.html')
