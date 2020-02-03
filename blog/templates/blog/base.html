@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>DDC Talant Center</title>
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
@@ -12,6 +13,9 @@
     <div class="page-header">
         {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'logout' %}" class="top-menu"><input type="submit" class="btn" value="Logout" /></a>
+        {% else %}
+            <a href="{% url 'login' %}" class="top-menu"><input type="submit" class="btn" value="Login" /></a>
         {% endif %}
         <h1>TALANT CENTER</h1>
         <h1> DDC</h1>
