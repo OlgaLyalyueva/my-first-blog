@@ -5,9 +5,27 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
 from django.core.mail import send_mail
-
+from django.http import HttpResponse, HttpResponseNotFound, Http404,  HttpResponseRedirect
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
+def login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                # Redirect to a post_new page.
+                return HttpResponseRedirect("/post/new/")
+            else:
+                return render(request, 'blog/login.html')
+        else:
+            print('invalid login')
+            return render(request, 'blog/login.html')
+        # Return an 'invalid login' error message.
+    else:
+        return render(request, 'blog/login.html')
 
 def main(request):
     return render(request, 'blog/main.html')
