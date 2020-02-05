@@ -128,3 +128,9 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = "olgalyalyueva@gmail.com"
 EMAIL_HOST_PASSWORD = '7d7a4339'
 EMAIL_PORT = '587'
+
+# settings for sending the 'reset password' email
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/loggedout'
