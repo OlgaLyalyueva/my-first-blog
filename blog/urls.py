@@ -2,14 +2,17 @@ from django.urls import path
 from django.conf.urls import include
 from . import views
 
+
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('loggedout/', views.loggedout, name='loggedout'),
+
 
 # urls for main tabs
     path('', views.main, name='main'),
     path('post/list/', views.post_list, name='post_list'),
     path('contacts/', views.contacts, name='contacts'),
+
 
 # urls for dance style pages
     path('breakdance/', views.breakdance, name='breakdance'),
@@ -20,6 +23,7 @@ urlpatterns = [
     path('modern/', views.modern, name='modern'),
     path('jazzfunk/', views.jazzfunk, name='jazzfunk'),
     path('latina/', views.latina, name='latina'),
+
 
 # urls for posts
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
