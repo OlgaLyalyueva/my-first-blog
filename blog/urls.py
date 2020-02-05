@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('loggedout/', views.loggedout, name='loggedout'),
 
 # urls for main tabs
     path('', views.main, name='main'),
