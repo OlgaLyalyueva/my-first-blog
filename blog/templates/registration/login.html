@@ -5,8 +5,8 @@
         <form method="POST" action="{% url 'login' %}" class="login">
             {% csrf_token %}
             <h3>Welcome Back</h3>
-            <input type="text" name="username" placeholder="Enter your login" id="username" required />
             <input type="password" name="password" placeholder="Enter your password" id="password" required />
+            <input type="email" name="username" placeholder="Enter your login" id="username" required />
             {% if form.errors %}
             <p>Something is wrong</p>
             {% endif %}
