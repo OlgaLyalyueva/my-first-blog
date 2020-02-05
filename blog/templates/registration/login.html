@@ -17,6 +17,7 @@
             {% if form.errors %}
             <p>Something is wrong</p>
             {% endif %}
+            <a href="{% url 'password_reset' %}">Forgot password?</a>
             <input type="submit" name="submit" value="Login to DDC" class="btn" id="login_button" />
         </form>
     </div>
