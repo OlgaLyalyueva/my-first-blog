@@ -8,12 +8,15 @@ from django.core.mail import send_mail
 from django.http import HttpResponse, HttpResponseNotFound, Http404,  HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 
+
 # Create your views here.
 def loggedout(request):
     return render(request, 'blog/loggedout.html')
 
+
 def main(request):
     return render(request, 'blog/main.html')
+
 
 def contacts(request):
     contact_name = request.POST.get('name', '')
@@ -30,37 +33,48 @@ def contacts(request):
             fail_silently=False)
     return render(request, 'blog/contacts.html')
 
+
 def breakdance(request):
     return render(request, 'blog/breakdance.html')
+
 
 def contemporary(request):
     return render(request, 'blog/contemporary.html')
 
+
 def hiphop(request):
     return render(request, 'blog/hiphop.html')
+
 
 def aerial_silks(request):
     return render(request, 'blog/aerial_silks.html')
 
+
 def detskaya_horeografiya(request):
     return render(request, 'blog/detskaya_horeografiya.html')
+
 
 def modern(request):
     return render(request, 'blog/modern.html')
 
+
 def jazzfunk(request):
     return render(request, 'blog/jazzfunk.html')
 
+
 def latina(request):
     return render(request, 'blog/latina.html')
+
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
 
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
+
 
 def post_new(request):
     if request.method == "POST":
@@ -74,6 +88,7 @@ def post_new(request):
     else:
         form = PostForm()
         return render(request, 'blog/post_edit.html', {'form': form})
+
 
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
