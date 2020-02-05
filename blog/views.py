@@ -9,6 +9,8 @@ from django.http import HttpResponse, HttpResponseNotFound, Http404,  HttpRespon
 from django.contrib.auth import authenticate, login
 
 # Create your views here.
+def loggedout(request):
+    return render(request, 'blog/loggedout.html')
 
 def main(request):
     return render(request, 'blog/main.html')
