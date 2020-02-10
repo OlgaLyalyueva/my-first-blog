@@ -1,13 +1,19 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 
 {% block content %}
     {% for post in posts %}
         <div class="row">
-                <div class="post">
-                    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                    <p> {{ post.text|linebreaksbr }}</p>
-                    <div class="date">
-                        <p>Опубликовано: {{ post.published_date }}</p>
+            <div class="post">
+                {% if post.image %}
+                    <p><img src="{{ post.image.url }}" alt="" width="260" height="200" align="left" vspace="15" hspace="15"></p>
+                {% else %}
+                    <p><img src="{% static "images/post_default.png" %}" alt="NO IMAGE" width="220" height="200" align="left" vspace="15" hspace="15"></p>
+                {% endif %}
+                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                <p> {{ post.text|linebreaksbr }}</p>
+                <div class="date">
+                    <p>Опубликовано: {{ post.published_date }}</p>
                 </div>
             </div>
         </div>
