@@ -7,10 +7,12 @@
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active, .page-header h2 {
     color: #ffffff;
     font-size: 36pt;
+    margin-top: 45px;
     text-align: center;
     text-decoration: none;
     font-family: 'Lobster', cursive;
 }
+
 #navbar {
   margin: 0;
   padding: 0;
@@ -162,7 +164,7 @@ h3, h4 {
     color: #fff;
 }
 
-.login_form {
+.login_form, .password_reset_form {
     margin:auto;
     width: 50%;
     height: 50%;
@@ -190,10 +192,11 @@ h3, h4 {
     font-family: 'Verdana';
 }
 
-.login_form h3 {
+.login_form h3, .password_reset h3 {
     text-align: center;
 }
 
 #login_button {
     margin:auto;
 }
+
