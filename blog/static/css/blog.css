@@ -6,7 +6,7 @@
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active, .page-header h2 {
     color: #ffffff;
-    font-size: 36pt;
+    font-size: 30pt;
     margin-top: 45px;
     text-align: center;
     text-decoration: none;
@@ -166,6 +166,9 @@ h3, h4 {
 
 .login_form, .password_reset_form {
     margin:auto;
+    margin-bottom:20px;
+    padding-right:20px;
+    padding-left:40px;
     width: 50%;
     height: 50%;
     border: 1px solid #A0A0A0;
@@ -175,7 +178,7 @@ h3, h4 {
 
 #username, #password {
     margin:auto;
-    width: 60%;
+    width: 70%;
     margin-top: 20px;
     display:block;
     margin-bottom:20px;
@@ -196,7 +199,11 @@ h3, h4 {
     text-align: center;
 }
 
-#login_button {
-    margin:auto;
+.authorization-error-block p, .link, #login_button {
+    margin-left: 20%;
+    display: inline-block;
 }
+
+
+
 
