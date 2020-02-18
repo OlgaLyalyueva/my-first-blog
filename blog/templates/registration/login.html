@@ -14,11 +14,13 @@
             <button type="button" hidden aria-pressed="false" class="form__toggle-password"         data-toggle-password>
                 <span>Show password</span>
             </button>
-            {% if form.errors %}
-            <p>Something is wrong</p>
-            {% endif %}
-            <a href="{% url 'password_reset' %}">Forgot password?</a>
-            <input type="submit" name="submit" value="Login to DDC" class="btn" id="login_button" />
+            <div class="authorization-error-block">
+                {% if form.errors %}
+                <p>Something is wrong</p>
+                {% endif %}
+                <a class="link" href="{% url 'password_reset' %}">Forgot password?</a>
+                <input type="submit" name="submit" value="Login to DDC" class="btn" id="login_button" />
+            </div>
         </form>
     </div>
 {% endblock %}
