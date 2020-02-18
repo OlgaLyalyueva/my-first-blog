@@ -7,3 +7,8 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['image', 'title', 'text']
 
+
+class Subscribe(forms.Form):
+    Email = forms.EmailField()
+    def __str__(self):
+        return self.Email
