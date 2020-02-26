@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.template.defaultfilters import truncatechars  # or truncatewords
 
 
 class Post(models.Model):
@@ -17,3 +18,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+# function that limits the length of the string for admin interface
+    @property
+    def short_description(self):
+        return truncatechars(self.text, 20)
